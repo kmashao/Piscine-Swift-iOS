@@ -61,7 +61,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     //Mark: Actions
     @IBAction func setDefaultLabelText(_ sender: UIButton) {
         mealNameLabel.text = "Default Text"
-		debugPrint("sDT clicked")
+		debugPrint("SDT clicked")
     }
     
     @IBAction func selectImageFromLibrary(_ sender: UITapGestureRecognizer) {

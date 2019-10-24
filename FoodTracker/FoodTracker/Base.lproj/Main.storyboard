@@ -10,13 +10,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodTracker" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Puz-fR-c3X">
-                                <rect key="frame" x="20" y="79" width="374" height="434.5"/>
+                                <rect key="frame" x="20" y="79" width="374" height="554.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mk1-4U-e0k">
                                         <rect key="frame" x="0.0" y="0.0" width="37" height="20.5"/>
@@ -46,15 +46,20 @@
                                             <outletCollection property="gestureRecognizers" destination="xoz-qF-pGi" appends="YES" id="Eyt-WG-cqI"/>
                                         </connections>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tvM-Fy-Goz" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="444.5" width="200" height="110"/>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="WQi-Bi-9fG" secondAttribute="trailing" id="81e-Fe-r4E"/>
+                                    <constraint firstAttribute="trailing" secondItem="tvM-Fy-Goz" secondAttribute="trailing" constant="174" id="cBf-HE-Ac1"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Puz-fR-c3X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="LZI-0K-Wnp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Puz-fR-c3X" secondAttribute="bottom" constant="228.5" id="ZrP-1K-iQ8"/>
                             <constraint firstItem="Puz-fR-c3X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="flz-vY-GP3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Puz-fR-c3X" secondAttribute="trailing" constant="20" id="rr1-E2-39m"/>
                         </constraints>
