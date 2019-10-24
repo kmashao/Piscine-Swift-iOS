@@ -21,6 +21,11 @@ class RatingControl: UIStackView {
 		setUpButtons();
 	}
 	
+	//Mark: Actions
+	@objc func ratingBtnClicked(button :UIButton){
+		print("button clicked 👍");
+	}
+	
 	//Mark: Private Methods
 	
 	private func setUpButtons(){
@@ -36,6 +41,8 @@ class RatingControl: UIStackView {
 		button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true;
 		button.widthAnchor.constraint(equalToConstant: 44.0).isActive = true;
 		
+		//setup button action
+		button.addTarget(self, action: #selector(RatingControl.ratingBtnClicked(button:)), for: .touchUpInside)
 		//add button to view stack
 		addSubview(button);
 	}
